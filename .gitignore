@@ -56,7 +56,6 @@ pickle-email-*.html
 .ruby-gemset
 .env
 debug
-/spree
 .sass-cache
 **/.DS_Store
 /storage
