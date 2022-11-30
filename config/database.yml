@@ -59,6 +59,5 @@ production:
   <<: *default
   database: turbochat_production
   host: <%= ENV.fetch('DB_HOST') %>
-  username: chat_box
-  password: <%= ENV["CHAT_BOX_DATABASE_PASSWORD"] %>
-  
+  username: turbochat
+  password: <%= ENV["TURBOCHAT_DATABASE_PASSWORD"] %>
