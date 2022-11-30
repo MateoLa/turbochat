@@ -3,13 +3,12 @@ https://www.honeybadger.io/blog/chat-app-rails-actioncable-turbo
 https://www.youtube.com/watch?v=UvTLumcEMgU&list=PL3mtAHT_eRex1sJI2uoTBgFT3qAXFbEcy&index=1
 https://www.youtube.com/watch?v=9riNezgzLRY
 
-https://www.pluralsight.com/guides/creating-a-chat-using-rails-action-cable
+https://www.pluralsight.com/guides/creating-a-chat-using-rails-action-cable <br />
 This example implement the messages broadcasting by a Job (MessageBroadcastJob which perform_later)
 
 https://www.nopio.com/blog/rails-real-time-chat-application-part-1/
 https://www.nopio.com/blog/rails-chat-application-actioncable/
-https://mreigen.medium.com/how-to-use-rails-5-action-cable-to-build-a-chat-system-with-multiple-private-rooms-with-multiple-5bf82d98a5aa
-
+https://mreigen.medium.com/how-to-use-rails-5-action-cable-to-build-a-chat-system-with-multiple-private-rooms-with-multiple-5bf82d98a5aa <br />
 (Nopio and Reigen implement the conversations model, almost the equivalent to rooms in another solutions)
 
 https://www.twilio.com/blog/build-chat-ruby-on-rails-applications
@@ -24,17 +23,17 @@ https://github.com/Zakui/ChatGem
 https://www.colby.so/posts/pagination-and-infinite-scrolling-with-hotwire
 ##### Free Pictures
 www.unsplash.com
-##### Rails 7 React Users (Deanin)
+##### Rails 7 React Users (Dean DeHart)
 https://www.youtube.com/watch?v=KnTtdxRlEE0
-##### Stripe Payments (Deanin)
+##### Stripe Payments (Dean DeHart)
 https://www.youtube.com/watch?v=hHC_9GXc60E
-##### Devise Google Login (Deanin)
+##### Devise Google Login (Dean DeHart)
 https://www.youtube.com/watch?v=CnZnwV38cjo&t=183s
-##### Bullet - Performance (Deanin)
+##### Bullet - Performance (Dean DeHart)
 https://www.youtube.com/watch?v=v2ehGvveYP0
-##### Devise authentication with Google (Deanin)
+##### Devise authentication with Google (Dean DeHart)
 https://www.youtube.com/watch?v=CnZnwV38cjo
-##### API authentication with Doorkeeper (Deanin)
+##### API authentication with Doorkeeper (Dean DeHart)
 https://www.youtube.com/watch?v=Kwm4Edvlqhw
 
 ##### Devise integration in Rails 7 with Turbo
