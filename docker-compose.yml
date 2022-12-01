@@ -3,7 +3,6 @@ services:
   postgres:
     image: postgres:13-alpine
     environment:
-#      POSTGRES_HOST_AUTH_METHOD: trust
       POSTGRES_USER: ${DB_USERNAME}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
@@ -21,14 +20,12 @@ services:
       dockerfile: Dockerfile.development
       args:
         GITHUB_TOKEN: ${GITHUB_TOKEN}
-        RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
-    command: bash -c "rm -rf tmp/pids/server.pid && yarn install && yarn build && bundle exec rails s -b 0.0.0.0 -p 3000"
+    command: bash -c "rm -rf tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0 -p 3000"
     ports:
       - '${DOCKER_HOST_WEB_PORT:-3000}:3000'
     volumes:
       - 'bundle_cache:/bundle'
       - '.:/app'
-#      - .env:/app/.env
     environment:
       REDIS_URL: redis://redis:6379/0
       DB_HOST: postgres
@@ -51,7 +48,6 @@ services:
     volumes:
       - 'bundle_cache:/bundle'
       - '.:/app'
-#      - .env:/app/.env
     environment:
       REDIS_URL: redis://redis:6379/0
       DB_HOST: postgres
