@@ -8,7 +8,10 @@ RUN apt-get update -yq \
   && apt-get update \
   && apt-get install -y --no-install-recommends imagemagick postgresql-client \
   # INSTALL NODE
-  && curl -sL https://deb.nodesource.com/setup_16.x | bash - 
+  && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+  && apt-get install -y --no-install-recommends nodejs \
+  # INSTALL YARN
+  && npm install -g yarn
 
 # Clean cache and temp files, fix permissions
 RUN apt-get clean -qy \
