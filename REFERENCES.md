@@ -40,3 +40,5 @@ https://www.youtube.com/watch?v=Kwm4Edvlqhw
 https://betterprogramming.pub/devise-auth-setup-in-rails-7-44240aaed4be
 https://gorails.com/episodes/devise-hotwire-turbo
 
+##### Rails 7 on Docker
+https://github.com/ryanwi/rails7-on-docker
