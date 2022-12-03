@@ -2,6 +2,7 @@ class RoomsController < ApplicationController
   include RoomsHelper
   before_action :authenticate_user!
   before_action :set_status
+  
   def index
     @room = Room.new
     @joined_rooms = current_user.joined_rooms.order('last_message_at DESC')

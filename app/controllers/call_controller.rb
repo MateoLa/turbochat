@@ -1,7 +1,9 @@
 class CallController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user, only: [:user]
-  def user; end
+  
+  def user
+  end
 
   def create
     head :no_content

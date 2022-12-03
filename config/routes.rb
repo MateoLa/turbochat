@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'rooms/join/:id', to: 'rooms#join', as: 'join_room'
 
   root 'pages#home'
+  
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
