@@ -42,3 +42,8 @@ https://gorails.com/episodes/devise-hotwire-turbo
 
 ##### Rails 7 on Docker
 https://github.com/ryanwi/rails7-on-docker
+
+##### WebRTC SignalingServer
+https://github.com/jeanpaulsio/action-cable-signaling-server
+https://github.com/BranLiang/demo-rails-webrtc
+

@@ -1,11 +1,11 @@
 class AppearanceChannel < ApplicationCable::Channel
   def subscribed
-    stream_from 'appearance_channel'
+    stream_from "appearance_channel"
   end
 
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
-    stop_stream_from 'appearance_channel'
+    stop_stream_from "appearance_channel"
     offline
   end
 
@@ -25,7 +25,7 @@ class AppearanceChannel < ApplicationCable::Channel
   end
 
   def receive(data)
-    ActionCable.server.broadcast('appearance_channel', data)
+    ActionCable.server.broadcast("appearance_channel", data)
   end
 
   private
