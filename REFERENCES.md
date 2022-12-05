@@ -47,3 +47,7 @@ https://github.com/ryanwi/rails7-on-docker
 https://github.com/jeanpaulsio/action-cable-signaling-server
 https://github.com/BranLiang/demo-rails-webrtc
 
+##### Emogi Popup Picker (Dean DeHart)
+https://www.youtube.com/watch?v=vkgNShV4aDU
+
+

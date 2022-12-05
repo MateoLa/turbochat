@@ -14,3 +14,5 @@ pin 'stimulus', to: 'https://ga.jspm.io/npm:stimulus@2.0.0/dist/stimulus.umd.js'
 pin '@rails/activestorage', to: 'activestorage.esm.js'
 pin 'chartkick', to: 'chartkick.js'
 pin 'Chart.bundle', to: 'Chart.bundle.js'
+pin "@picmo/popup-picker", to: "https://ga.jspm.io/npm:@picmo/popup-picker@5.4.0/dist/index.js"
+pin "picmo", to: "https://ga.jspm.io/npm:picmo@5.4.2/dist/index.js"

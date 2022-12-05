@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'admin/dashboard'
+  root 'pages#home'
+
   get 'call', to: 'call#user', as: 'call_user'
   post 'call', to: 'call#create'
 
@@ -14,13 +15,21 @@ Rails.application.routes.draw do
   # join_room_path(room)
   get 'rooms/join/:id', to: 'rooms#join', as: 'join_room'
 
-  root 'pages#home'
-  
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
 
   get 'user/:id', to: 'users#show', as: 'user'
+
+  get 'admin/dashboard'
+
+  authenticated :user, ->(user) { user.admin? } do
+    get 'admin', to: 'admin#index'
+    get 'admin/posts'
+    get 'admin/comments'
+    get 'admin/users'
+    get 'admin/post/:id', to: 'admin#show_post', as: 'admin_post'
+  end
 
 end
