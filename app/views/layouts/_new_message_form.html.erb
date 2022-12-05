@@ -16,17 +16,21 @@
       <%= f.file_field(:attachments, multiple: true, 
         data: { controller: "message-preview", action:"change->message-preview#preview"}, direct_upload: true) %>
     </div>
-    <%= content_tag(:div, "", class:"pickerContainer",
-      data: { message_form_target: "pickerContainer" }) %>
-    <span id="emoji-picker" class="trix-button" data-trix-action="" tabindex="1">😀</span>
-    <%= f.text_field :body, id: 'chat-text',
-      data: { message_form_target: "bodyText" },
-      class: 'form-control msg-content', autocomplete: 'off' %>
-    <%= f.submit "Send",
+
+    <%= content_tag(:div, "", class:"pickerContainer", data: { message_form_target: "pickerContainer" }) %>
+    <div class="input-group mb-3 px-1">
+      <span id="emoji-picker" class="input-group-text emoji-picker">😀</span>
+      <%= f.text_field :body, id: 'chat-text',
+        data: { message_form_target: "messageBody" },
+        class: 'form-control msg-content',
+        placeholder: t(:message, scope: :turbochat),
+        autocomplete: 'off' %>
+    </div>      
+    <%= f.submit t(:send, scope: :turbochat),
       data: {disable_with: false, 
       controller: "message-preview", 
       action:"click->message-preview#clearPreviews"}, 
-      class: 'btn btn-primary' %>
+      class: 'btn btn-primary mb-3' %>
   </div>
 <% end %>
 </div>

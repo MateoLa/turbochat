@@ -1,19 +1,17 @@
 import { Controller } from "@hotwired/stimulus";
 import { createPopup } from "@picmo/popup-picker";
-// import { RichText } from "../classes/RichText";
 
 export default class extends Controller {
   reset() {
     this.element.reset();
   }
 
-  static targets = ["bodyText", "pickerContainer"];
+  static targets = ["messageBody", "pickerContainer"];
   connect() {
     console.log("Connected to emoji-picker");
-    let emojiButton = document.getElementById("emoji-picker");
-    let picker;
-//    let richText = new RichText(picker, emojiButton);
-    picker = createPopup(
+    const emojiButton = document.querySelector("#emoji-picker");
+
+    const picker = createPopup(
       { rootElement: this.pickerContainerTarget, },
       { triggerElement: emojiButton,    // The element that triggers the popup
         referenceElement: emojiButton,  // The element to position the picker relative to
@@ -21,16 +19,13 @@ export default class extends Controller {
       }
     );
 
-    emojiButton.addEventListener("click", picker.toggle());
+    const togglePicker = () => { picker.toggle(); }
 
-    picker.addEventListener("emoji:select", (event) => {
-      this.bodyTextTarget.value += event.emoji;
+    emojiButton.addEventListener("click", togglePicker);
+
+    // The picker emits an event when an emoji is selected. Do with it as you will!
+    picker.addEventListener("emoji:select", event => {
+      this.messageBodyTarget.value += event.emoji;
     });
-
-//    richText.setPicker(picker);
-  }
-
-  setPicker(picker) {
-    this.picker = picker;
   }
 }

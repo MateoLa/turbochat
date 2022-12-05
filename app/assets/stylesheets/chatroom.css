@@ -10,8 +10,8 @@
   opacity: 0.75;
 }
 /**
-    * Adds a horizontal scroll bar that hides extra attachments
-    */
+* Adds a horizontal scroll bar that hides extra attachments
+*/
 #attachment-previews {
   position: absolute;
   display: inline;
@@ -176,4 +176,9 @@
 }
 .microphone-icon:hover {
   opacity: 0.75;
+}
+
+.emoji-picker {
+  background-color: #fff !important;
+  cursor: pointer;
 }
