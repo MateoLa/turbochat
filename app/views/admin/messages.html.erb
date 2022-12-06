@@ -5,18 +5,16 @@
     <thead>
       <tr>
         <th scope="col">Id</th>
-        <th scope="col">Post</th>
+        <th scope="col">Message</th>
         <th scope="col">Author</th>
-        <th scope="col">Comments</th>
       </tr>
     </thead>
     <tbody>
-      <% @posts.each do |post| %>
+      <% @messages.each do |message| %>
         <tr>
-          <th scope="row"><%= post.id %></th>
-          <td><%= link_to post.title.truncate(15), admin_post_path(post) %></td>
-          <td><%= post.user.full_name %></td>
-          <td><%= pluralize(post.comments.size, "Comment") %></td>
+          <th scope="row"><%= message.id %></th>
+          <td><%= link_to message.body.truncate(15), admin_message_path(message) %></td>
+          <td><%= message.user.username %></td>
         </tr>
       <% end %>
     </tbody>

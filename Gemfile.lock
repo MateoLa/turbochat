@@ -68,6 +68,10 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
+    ahoy_matey (4.1.0)
+      activesupport (>= 5.2)
+      device_detector
+      safely_block (>= 0.2.1)
     ast (2.4.2)
     bcrypt (3.1.18)
     bindex (0.8.1)
@@ -97,6 +101,7 @@ GEM
     debug (1.7.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    device_detector (1.0.7)
     devise (4.8.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -106,6 +111,7 @@ GEM
     diff-lcs (1.5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    errbase (0.2.2)
     erubi (1.11.0)
     ffi (1.15.5)
     ffi (1.15.5-x64-mingw-ucrt)
@@ -276,6 +282,8 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     rubyzip (2.3.2)
+    safely_block (0.3.0)
+      errbase (>= 0.1.1)
     selenium-webdriver (4.7.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -334,6 +342,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  ahoy_matey (~> 4.1)
   bootsnap
   brakeman
   bundler-audit

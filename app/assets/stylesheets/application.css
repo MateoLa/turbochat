@@ -150,6 +150,10 @@ body {
   }
 }
 
-a {
+.navbar a {
+  color: #fff !important;
+}
+
+#chatroom_container a {
   color: #fff !important;
 }

@@ -1,21 +1,17 @@
 class AdminController < ApplicationController
-  def dashboard
-    if current_user&.admin?
-      @messages = Message.messages_this_month
-    else
-      redirect_to root_path
-    end
+
+  def index
+    @messages = Message.messages_this_month
   end
 
-  def index; end
-
-
-  def posts
-    @posts = Post.all.includes(:user)
+  def rooms
+    @rooms = Room.all
   end
 
 
-  def comments; end
+  def messages
+    @messages = Message.all.includes(:user)
+  end
 
   def users; end
 
