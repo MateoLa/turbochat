@@ -1,6 +1,6 @@
 # README
 
-Thanks to [Dean DeHart](https://github.com/Deanout) for his excellent tutorials.
+Now thanks to me.
 
 ## REFERENCES
 
