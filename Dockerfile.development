@@ -10,7 +10,7 @@ RUN apt-get clean -qy \
 RUN mkdir /app
 WORKDIR /app
 
-RUN gem install bundler
+RUN gem install bundler -v 2.4.1
 
 ENV LANG=C.UTF-8 \
   BUNDLE_GEMFILE=/app/Gemfile \
@@ -22,9 +22,8 @@ ENV LANG=C.UTF-8 \
   GEM_HOME=/bundle
   
 ENV PATH="${BUNDLE_BIN}:${PATH}"
-
 COPY Gemfile Gemfile.lock ./
-RUN gem install bundler -v 2.3.12
+
 
 EXPOSE 3000
 CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]

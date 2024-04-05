@@ -10,7 +10,7 @@ RUN apt-get clean -qy \
 RUN mkdir /app
 WORKDIR /app
 
-RUN gem install bundler -v 2.3.12
+RUN gem install bundler -v 2.4.1
 
 ENV LANG=C.UTF-8 \
   BUNDLE_GEMFILE=/app/Gemfile \
