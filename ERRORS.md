@@ -36,17 +36,20 @@ WARNING Memory overcommit must be enabled! Without it, a background save or repl
   or
 #### /usr/bin/env: ‘ruby\r’: No such file or directory
 
-Those errors happens when you have incorrect line endings. <br>
-* on Windows Git is set up to automatically convert EOL characters to CRLF.
+Those errors happens when you have incorrect line endings in some of your files. <br>
+* on Windows: <br>
+  (Git is set up to automatically convert EOL characters to CRLF) <br>
 
-Making Git retain original EOL characters (disabling autocrlf).
+  Go to the file that gives you the error (./bin/importmap in my case). <br>
+  Change the file EOL endings from CRLF to LF (with Notepad++, Sublime or VisualStudio) <br>
+  VisualStudio example: At the right bottom of the screen there is a little button that says “LF” or “CRLF”: <br>
+  Select LF and save. Run you command again.
+
+Optionally:
+  Make Git retain original EOL characters (disabling autocrlf).
   Specify EOL type in .gitattributes with `text eol=lf` <br>
-  or Disable autocrlf in Git's config file (.gitconfig) with `autocrlf=false`.
-  
-  Change your file EOL endings from CRLF to LF (with Notepad++, Sublime or VisualStudio)
-  Example VisualStudio: go to the file that gives you the error (./bin/importmap in my case). <br>
-  At the bottom right of the screen in VS Code there is a little button that says “LF” or “CRLF”: <br>
-  select LF and save. Run you command again. :)
+  or Disable autocrlf in Git's config file (.gitconfig) with `autocrlf=false`. <br>
+  (making Git retain original EOL characters).
 
 #### ActiveRecord::NoDatabaseError
 (ActiveRecord::NoDatabaseError: We could not find your database: mbusch_production. Which can be found in the database configuration file located at config/database.yml)
@@ -87,6 +90,15 @@ docker compose run --rm -it app bundle install
   * terser
 
 So, you have to install node.js if you want these gems to work.
+
+In your dockerfile:
+```sh
+  # INSTALL NODE
+  RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+  && apt-get install -y --no-install-recommends nodejs \
+  # INSTALL YARN
+  && npm install -g yarn
+```
 
 #### Psych::DisallowedClass Exeption
 
@@ -130,3 +142,10 @@ git rm --cached .env
 
 
 #### No route matches [GET] "/users/sign_out"
+
+
+#### Uncaught TypeError: El especificador “popper” era un especificador básico, pero no se reasignó a nada.
+(Los especificadores de módulos relativos deben comenzar con “./”, “../” o “/”.)
+
+* gem "bootstrap" (in Gemfile)
+* > docker compose run --rm web bundle install

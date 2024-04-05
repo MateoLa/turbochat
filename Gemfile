@@ -89,6 +89,7 @@ gem 'rack-cache' # http caching
 # sidekiq
 gem 'sidekiq'
 
+gem "bootstrap", "~> 5.2", ">= 5.2.3"
 gem "i18n"
 gem "devise", "~> 4.8"
 gem 'mini_magick', '~> 4.9', '>= 4.9.4'
